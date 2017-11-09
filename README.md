@@ -1,9 +1,8 @@
-[<img src="https://img.shields.io/travis/playframework/play-scala-slick-example.svg"/>](https://travis-ci.org/playframework/play-scala-slick-example)
+Concept:  Linking data points from JIRA and GitHub APIs by scraping Jenkins log output.
 
-# play-scala-slick-example
+- Jenkins build logs should include the GitHub PR number (exe: `(#271)`) and the PR description/title in the same statement. IF developers consistently tag every PR with the associated story/defect/bug number from their JIRA ticket (ie. `SM-586`) then we should be able to logically associate which GitHub PRs are associated with which stories.
 
-This project demonstrates how to create a simple CRUD application with [Play](https://www.playframework.com/) and [Slick](http://slick.lightbend.com/doc/3.1.1/) using [Play-Slick](https://www.playframework.com/documentation/latest/PlaySlick).
-
-To see an example of a Play application using Slick outside of the application lifecycle, please see:
-
-https://github.com/playframework/play-scala-isolated-slick-example/
+- Using the above derived matrix, we should be able to:
+1) Create a browsable visual representation of stories, their associated tasks, notes, completion times, and relevant code.
+2) Associate bugs with the stories that introduced the bugs. This may open the door for future analysis of what types of stories introduce bugs?
+3) Run statistical analysis to determine correlations between epochs, ticket types, other Agile metrics tracked by JIRA, and code stats (# lines, # commits, # reverts, # comments...).

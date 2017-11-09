@@ -1,0 +1,5 @@
+.idea/**/*
+Scrumala.iml
+project/project/**/*
+project/target/**/*
+target/**/*
